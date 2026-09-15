@@ -1,0 +1,144 @@
+site_name: "OLC Climate Resiliency Hackathon · OASIS"
+site_description: 'Editable project workspace and report-out for the September 2026 OLC Climate Resiliency and Digital Sovereignty Hackathon'
+site_author: Ty Tuff
+site_url: "https://cu-esiil.github.io/hackathon_group_OASIS/"
+
+# Repository
+repo_name: CU-ESIIL/hackathon_group_OASIS
+repo_url: https://github.com/CU-ESIIL/hackathon_group_OASIS
+edit_uri: edit/main/docs/
+# Copyright
+copyright: 'Copyright &copy; 2026 University of Colorado Boulder · MIT License'
+
+# Page tree
+nav:
+  - Home: index.md
+  - OLC Example: olc-example.md
+  - Fire Example: example.md
+  - Directions:
+      - Overview: instructions.md
+      - Day 1 — Question, Evidence, and Build: instructions/day1.md
+      - Day 2 — Interpret, Steward, and Share: instructions/day2.md
+      - Public Data and Stewardship: instructions/stewardship.md
+      - Optional CubeDynamics: instructions/cubedynamics.md
+  - Facilitator Guide: facilitator-guide.md
+  # Legacy Summit team galleries remain in the repository but are not part of the Hackathon navigation.
+  #- AI for Sustainability:
+  #    - Defining AI: ai-for-sustainability/defining-ai.md
+  #    - Defining Sustainability: ai-for-sustainability/defining-sustainability.md
+  #    - Norms: ai-for-sustainability/norms.md
+  #    - What Does It Cost?: ai-for-sustainability/what-does-it-cost.md
+  #- Specialty Tracks:
+  #    - LLM: https://cu-esiil.github.io/LLM_lesson_exemplar/cyverse/
+  #    - Digital Twins: specialty-tracks/digital-twins.md
+  #    - Earth Embeddings: https://center-for-effective-global-action-cega.github.io/MOSAIKS-Training-Manual/en/index.html
+      # - Causal Inference: specialty-tracks/causal-inference.md
+  - Cloud Triangle:
+      - Connect instance to GitHub: instructions/link-to-github.md
+      - Instance to/from GitHub: instructions/push-to-github.md
+      - Instance to/from persistent storage: instructions/save-to-persistent-storage.md
+  - Links:
+      - OLC source curriculum: https://github.com/olc-techsupport/Education-Climate-Resiliency-Digital-Sovereignty/tree/main/2026%20Buildathon
+      - Your code: https://github.com/CU-ESIIL/hackathon_group_OASIS/tree/main/code
+      - Your documentation: https://github.com/CU-ESIIL/hackathon_group_OASIS/tree/main/docs
+
+
+not_in_nav: |
+  data.md
+  stickers.md
+  instructions/day3.md
+  project_template.md
+  summit-team-sites.md
+  summit-team-sites-gallery.md
+  assets/cyverse_basics/README.md
+  assets/docker_basics/README.md
+  assets/template/README.md
+  orientation/art_gallery.md
+  orientation/cyverse_basics.md
+  orientation/docker_basics.md
+  orientation/markdown_basics.md
+  people/README.md
+  people/template.md
+  people/jane-doe.md
+  people/john-smith.md
+  people/ty-tuff.md
+  people/aakriti-joshi.md
+  people/jane-example.md
+  people/john-example.md
+
+# Configuration
+theme:
+  highlightjs: true
+  name: material
+  custom_dir: docs/overrides
+  font: false
+  logo: 'assets/esiil_content/group_logo.svg'
+  favicon: 'assets/esiil_content/favicon.ico'
+  # setting features for the navigation tab
+  features:
+    - navigation.sections
+    - navigation.instant
+    - navigation.tracking
+    - navigation.indexes
+    - navigation.top
+    - toc.follow
+    - content.code.copy
+    - content.action.edit
+  # Default values, taken from mkdocs_theme.yml
+  language: en
+  palette:
+    # Palette toggle for light mode
+    - scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+# Options
+extra:
+  homepage: https://cu-esiil.github.io/home/
+  social:
+    - icon: fontawesome/brands/github
+    # link: https://github.com/cu-esiil/
+
+extra_css:
+  - stylesheets/tokens.css
+  - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/mode-toggle.js
+  - javascripts/presentation-mode.js
+  - javascripts/report-out-gallery.js
+
+hooks:
+  - hooks.py
+
+plugins:
+    - search
+    - mkdocstrings
+    - git-revision-date
+    - mkdocs-jupyter:
+          include_source: True
+          ignore_h1_titles: True
+markdown_extensions:
+  - admonition
+  - toc:
+      toc_depth: 2
+  - attr_list
+  - md_in_html
+  - pymdownx.details
+  - pymdownx.snippets:
+      base_path:
+        - docs
+
+validation:
+  omitted_files: ignore
