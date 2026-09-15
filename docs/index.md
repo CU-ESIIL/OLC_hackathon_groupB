@@ -1,272 +1,167 @@
-Team Name: Carbon and Code
-
-Team Members: Cully Pourier, Leon Red Kettle, Emmanuel Akwasi Opoku, and Brittany Mark
-
-Title: Environmental and Social Impacts of Data centers
----
-
-!!! tip "Start here — September 15–16, 2026"
-    This page is your team’s shared workspace, public project story, and final report-out. Keep **Instructions on** while working, turn them **off** to preview the public page, and select **Hackathon Report Out** for the short presentation view.
-
-    Follow one clear path: **Question → Evidence → Representation → Build → Interpret → Uncertainty → Stewardship → Share**.
-
-    Minimum success is one focused question, one visible artifact or well-documented attempt, one evidence-backed learning, one honest uncertainty, and one responsible next step. Technical complexity is optional.
-
-!!! warning "Before writing on a public site"
-    Use only material appropriate for public GitHub. Do not add culturally sensitive knowledge, protected locations, private or community-controlled data, personal information, restricted stewardship material, or claims of review or approval that have not occurred.
-
-# This is now my awesome project
-
-!!! note "First edit"
-    Replace the page title and heading with your project name. Add a short subtitle that tells visitors what you are exploring.
-
-    [Edit the team page in Markdown](https://github.com/CU-ESIIL/hackathon_group_OASIS/edit/main/docs/index.md){ .md-button target="_blank" rel="noopener" }
-
-*One sentence describing the question, place, or possibility your team is exploring.*
-
-![Team hero image](assets/hero/hero11.jpg)
-
-!!! note "Replace the hero image"
-    Upload a wide public-safe image to `docs/assets/hero/` and replace `hero.png`, or update the Markdown path above. Write alt text that explains the image.
-
-    [Open the hero-image folder](https://github.com/CU-ESIIL/hackathon_group_OASIS/tree/main/docs/assets/hero){ .md-button target="_blank" rel="noopener" }
+# Carbon and Code: Environmental and Social Impacts of Data Centers
+*Evaluating hyperscale data center siting in South Dakota through spatial analysis of water vulnerability, community buffers, and distributed alternatives.*
 
 [See the completed OLC example](olc-example.md){ .md-button .md-button--primary }
 [See the completed fire example](example.md){ .md-button }
 [Open the Hackathon directions](instructions.md){ .md-button }
 
-People and Roles:
-
-Brittany: Data Collection: Identifying and streaming relevant datasets
-
-Cully: Team Name, Team Members, Title, and uploaded image to site
-
-!!! note "Day 1 — quick introductions"
-    Add one short row per teammate. Share what you know, what you hope to learn, and which role you can take first. Roles can change as the work changes.
-
-    [Edit People](https://github.com/CU-ESIIL/hackathon_group_OASIS/edit/main/docs/index.md){ .md-button target="_blank" rel="noopener" }
+### People and Roles
 
 | Name | Affiliation | Contact | Starting role |
 |---|---|---|---|
-|  |  |  |  |
+| Cully Pourier | Hackathon Participant | Team Carbon & Code | Project framing, visual documentation, repository curation |
+| Leon Red Kettle | Hackathon Participant | Team Carbon & Code | Spatial analysis, zoning criteria, architectural modeling |
+| Emmanuel Akwasi Opoku | Hackathon Participant | Team Carbon & Code | Technical pipeline, data synthesis, narrative integration |
+| Brittany Mark | Hackathon Participant | Team Carbon & Code | Data engineering, pipeline streaming, source verification |
 
 ## Team Norms and Decision Making { #team-norms-and-decision-making }
 
-!!! note "Keep this fast"
-    Choose two or three norms and one simple decision rule. A five-minute agreement now can prevent a long disagreement later.
-
 Our team norms:
 
-- ...
-- ...
-- ...
+- Prioritize community impact and environmental protection over pure technical complexity.
+- Maintain transparent documentation of all assumptions and data limits.
+- Ensure every team member contributes to both technical artifacts and storytelling.
 
 Our decision rule:
 
-...
+- Consensus first; if time-constrained, the member leading the specific technical module decides how to proceed while documenting trade-offs.
 
 ## Our Question 📣 { #project-question .oasis-report-out-section }
 
-!!! note "Question → Evidence"
-    Write one question narrow enough to investigate during the Hackathon. Name what would count as progress. The question can change when the evidence shows it should.
-
-    The three OLC pathways are parallel options, not ability levels:
-
-    - **Guided Explorer:** explain what available evidence shows and does not show.
-    - **Data Investigator:** compare evidence, coverage, or assumptions.
-    - **Technical Extender:** test or extend a reproducible method.
-
-    [Edit the question and evidence](https://github.com/CU-ESIIL/hackathon_group_OASIS/edit/main/docs/index.md){ .md-button target="_blank" rel="noopener" }
-
 Our working question:
 
-...
+> How can emerging data center markets like South Dakota use spatial Earth observation and infrastructure data to proactively zone hyperscale data centers away from vulnerable watersheds and educational facilities, favoring distributed edge architectures over resource-intensive centralized facilities?
 
 What would count as progress by noon on September 16:
 
-...
-
-!!! question "Sovereignty checkpoint 1 — Who framed the question?"
-    Who helped define it? Whose priorities does it reflect? Who might frame it differently? Do the available public data fit the question, or are they merely convenient?
-
-    Record unresolved answers honestly. Completing this prompt is not sovereignty certification or a substitute for a locally appropriate data-governance process.
+- Extraction and spatial filtering of the IM3 Data Center Atlas for South Dakota.
+- A functional multi-layer GIS workflow defining a "Traffic Light" zoning schema (Red, Yellow, Green zones).
+- An interactive map or prototype visualizing buffer zones around municipal water service areas and public infrastructure.
 
 ## Why This Matters 📣 { #why-this-matters .oasis-report-out-section }
 
-!!! note "Connect the work to people without overclaiming"
-    Explain the potential value and intended audience. Do not describe an impact, partnership, consultation, or endorsement that has not happened.
-
 This matters because:
 
-...
+- Mature markets like Hillsboro, Oregon demonstrate that uncoordinated data center expansion leads to acute resource strain and severe community pushback after infrastructure is already locked in.
+- South Dakota is an emerging frontier: currently hosting just 3 MW of operational capacity, but facing a planned influx of over 500 MW (including the proposed 500 MW Gemini facility).
+- In semi-arid regions, evaporative cooling systems consume between 100,000 and 1,000,000+ gallons of potable water daily per facility.
+- Proximity to hyperscale facilities imposes chronic noise pollution (85–96 dB) and backup generator emissions (PM2.5/NOx), which peer-reviewed educational reporting links to adverse impacts on learning and school performance.
 
 People who might use, question, or improve this work:
 
-...
+- Tribal land-use planners and regional municipal zoning boards establishing data sovereignty frameworks.
+- Environmental justice advocates evaluating watershed depletion and grid reliability.
+- Infrastructure planners modeling distributed edge alternatives against centralized hyperscale footprints.
 
 ## What We Tried to Build 📣 { #what-we-tried-to-build .oasis-report-out-section }
 
-!!! note "Representation → Build"
-    Choose the smallest useful artifact: a figure, comparison, map, notebook, workflow, model, prototype, educational resource, or clearly documented attempt. Scientific usefulness matters more than software complexity.
-
-    [Edit the intended build](https://github.com/CU-ESIIL/hackathon_group_OASIS/edit/main/docs/index.md){ .md-button target="_blank" rel="noopener" }
-
 By the end of the Hackathon, we tried to make:
 
-...
+- A reproducible spatial zoning pipeline that takes proposed data center coordinates and evaluates compliance against environmental and human-health exclusion boundaries.
+- An interactive map artifact showing current vs. projected facilities against municipal water basins, electric transmission lines, and high-speed fiber corridors.
 
 Our chosen pathway and why it fit:
 
-...
-
-![Working notes, sketch, or whiteboard](assets/whiteboards/hackathon_working_notes.svg)
-
-*Working notes showing the question, intended artifact, and evidence boundary.*
+- **Data Investigator & Technical Extender:** We are combining open-source infrastructure projections with federal environmental layers to evaluate whether planned centralized sites encroach on vulnerable community resources.
 
 ## Data and Evidence { #data-and-evidence }
 
-!!! note "Source, place, period, meaning"
-    For every important dataset, record who produced it, the place or geographic support it represents, the observation period, and what one value physically means. Add links and citations.
-
 | Dataset | Source | Place | Period | What it measures |
 |---|---|---|---|---|
-| ... | ... | ... | ... | ... |
-
-!!! warning "Public data is a boundary, not blanket permission"
-    This Hackathon uses public datasets so teams can focus on environmental data science, building, interpretation, and communication during a short event. Public availability does not mean the data represent every relevant perspective or authorize every interpretation or use.
-
-    **Accessible ≠ interpretable ≠ actionable**
-
-    - **Accessible:** Can we obtain and analyze the data?
-    - **Interpretable:** What claims can the observations support?
-    - **Actionable:** Is there enough evidence, context, relationship, review, and authority for a real decision?
-
-!!! question "Sovereignty checkpoint 2 — What does the evidence represent?"
-    Does its spatial and temporal scale match the question? What is missing? Who collected and transformed it? Could someone with different knowledge of the place interpret it differently? Should the evidence change the question?
+| IM3 Open Source Data Center Atlas | MultiSector Dynamics / PNNL | Continental US / South Dakota | Feb 2026 Release (Projections to 2035) | Operational (MW) and projected hyperscale facilities, site footprint, siting costs |
+| Municipal Water Service Areas | IM3 / USGS / State GIS | Continental US / Regional SD | 2024–2026 | Delineated service polygons for public water supply and municipal utility coverage |
+| Electric Transmission Lines | EIA / HIFLD / DHS | South Dakota regional grid | 2024–2026 | Voltage capacity, line pathways, and grid interconnect corridors |
+| High-Speed Fiber Provider Density | FCC / IM3 Atlas | Regional US / South Dakota | 2025–2026 | Broadband routing density and fiber optic trunk lines |
+| Public Schools & Community Infrastructure | HIFLD / NCES | South Dakota | 2024–2026 | Geographic coordinates of K-12 educational facilities for noise buffer mapping |
 
 ## Methods and Tools { #methods-and-tools }
-
-!!! note "Document the build as it happens"
-    Record enough detail for another person to understand what you tried. Keep failed attempts and obstacles when they teach something useful.
 
 Methods, tools, or approaches we tried:
 
 | Approach | What we did | What happened |
 |---|---|---|
-| ... | ... | ... |
-
-[Open shared code](https://github.com/CU-ESIIL/hackathon_group_OASIS/tree/main/code){ .md-button target="_blank" rel="noopener" }
+| Spatial Data Extraction | Downloaded existing and projected geospatial layers from the IM3 Open Source Atlas | Isolated regional points for South Dakota, identifying the 500 MW Gemini site in Minnehaha County |
+| Buffer Zone Calculation | Defined a 2-mile precautionary buffer around schools and critical water service areas | Flagged potential overlap areas between projected hyperscale sites and sensitive community infrastructure |
+| Centralized vs. Distributed Comparison | Modeled resource intensity differences between 500 MW centralized sites and 2 MW distributed edge sites | Clarified the trade-off: distributed edge sites dramatically reduce localized water cooling stress |
 
 ### Working visual or output
 
 ![Working figure, map, screenshot, or prototype](assets/figures/figure1.png)
 
-*Describe what this artifact shows, what evidence produced it, and why it matters.*
+*Figure 1: IM3 Open Source Data Center Atlas showing national infrastructure corridors, existing data centers, and 2035 projected hyperscale hubs layered against municipal water basins.*
 
 ### Failed attempts and useful obstacles
 
-- ...
-
-!!! info "Want to go further? CubeDynamics is optional"
-    CubeDynamics can support reproducible labeled-array workflows, but it is not required for a successful project. As of September 2026, the official project is prerelease and has no public PyPI or GitHub Release installation. Use only a facilitator-provided, checksum-verified setup, keep the scientific question ahead of the software, and see the [optional CubeDynamics guide](instructions/cubedynamics.md).
+- National datasets required extensive spatial cropping to avoid computational lag when running polygon intersections locally.
+- Determining precise daily water consumption for specific proprietary cooling towers is rarely disclosed publicly; we used standardized conservative ranges (100k to 1M gal/day) based on published literature.
 
 ## What We Made { #what-we-made }
 
-!!! note "Artifact first"
-    Link the strongest artifact directly. If it is incomplete, say what works, what does not, and what another team would need to continue.
-
-- **Main artifact:** ...
-- **Code or notebook:** ...
-- **Reusable data or output:** ...
-- **How to reproduce or continue:** ...
+- **Main artifact:** A prototype "Smart Zoning Engine" mapping pipeline separating regional land into Red (Exclusion), Yellow (Buffer), and Green (Viable Distributed Corridor) zones.
+- **Code or notebook:** Jupyter Notebooks executing GeoPandas spatial joins between projected facility points, school locations, and water boundaries.
+- **Reusable data or output:** A clean GeoJSON subset of South Dakota data infrastructure, ready for integration into open-source web mapping libraries.
 
 ## What We Learned 📣 { #what-we-learned .oasis-report-out-section }
 
-!!! note "Interpret"
-    Separate the observation from the interpretation. Point to the figure, analysis, comparison, or artifact supporting every main claim.
+**Observation — what happened:** 
+Statewide data shows South Dakota currently operates only 3 MW across two Tierpoint facilities in Sioux Falls. However, pipeline data indicates a single planned project—the Gemini Data Center in Minnehaha County—represents 500 MW of demand, fundamentally shifting the state’s infrastructure footprint overnight.
 
-    [Edit the learning and main figure](https://github.com/CU-ESIIL/hackathon_group_OASIS/edit/main/docs/index.md){ .md-button target="_blank" rel="noopener" }
+**Evidence — what supports it:** 
+CleanView project registries and the IM3 Data Center Atlas corroborate this 500 MW projection alongside rural edge developments like the 2 MW Sequitor Edge project in Rapid City.
 
-**Observation — what happened:** ...
-
-**Evidence — what supports it:** ...
-
-**Interpretation — what we think it means:** ...
-
-![Main result or most useful artifact](assets/figures/main_result.png)
-
-*Figure 1. Write a claim-oriented caption: what pattern or result should a reader see, and what evidence boundary matters?*
+**Interpretation — what we think it means:** 
+South Dakota is at a critical policy crossroads. Adopting a centralized hyperscale model concentrates extreme water and power demands into localized municipal systems. Shifting focus toward distributed, smaller-scale edge nodes allows data infrastructure to expand along existing transmission corridors without exceeding watershed capacities.
 
 ### Claim ladder
 
 | Level | Team statement |
 |---|---|
-| **What We Observed** | ... |
-| **What We Think** | ... |
-| **What We Don’t Know** | ... |
-| **What We Should Not Claim** | ... |
+| **What We Observed** | Planned data center capacity in South Dakota is projected to expand by over 16,000% (from 3 MW to 505 MW), driven by a single hyperscale development. |
+| **What We Think** | Siting centralized facilities without proactive buffer zoning threatens semi-arid water supplies and risks educational and noise disruptions for adjacent communities. |
+| **What We Don’t Know** | The exact proprietary cooling design (evaporative vs. closed-loop air cooled) planned for upcoming regional sites. |
+| **What We Should Not Claim** | That all data center development is inherently destructive, or that economic benefits cannot coexist with strict environmental zoning. |
 
 ## What Didn’t Work { #what-didnt-work }
 
-What we tried, what happened, and what another team should know:
-
-...
+- Attempting to dynamically query real-time water drawdown rates from local aquifers proved impossible within hackathon time constraints due to fragmented state and municipal reporting. We pivoted to using verified municipal service boundaries as proxy vulnerability zones.
 
 ## What Remains Uncertain 📣 { #what-remains-uncertain .oasis-report-out-section }
 
-!!! note "Uncertainty is a result"
-    Name the largest evidence gap, assumption, alternative interpretation, or validation need. A precise limit is more useful than false certainty.
-
-    [Edit the uncertainty](https://github.com/CU-ESIIL/hackathon_group_OASIS/edit/main/docs/index.md){ .md-button target="_blank" rel="noopener" }
-
 What these data or artifacts cannot tell us:
 
-...
+- The exact power purchase agreements (PPAs) or backup fuel types (diesel vs. battery storage) contracted by incoming operators.
+- The degree of closed-loop water recycling technology that developers might voluntarily adopt prior to groundbreaking.
 
 What would strengthen or challenge our interpretation:
 
-...
-
-!!! question "Sovereignty checkpoint 3 — Before sharing"
-    Who could be affected by this interpretation? Who is absent? Who should help interpret or review a continuation? Is everything on this page appropriate for public GitHub?
-
-    Naming a reviewer or collaborator does not imply that they reviewed, approved, authorized, or endorsed the work.
+- On-the-ground acoustic baseline readings near existing urban facilities.
+- Transparent municipal utility contracts outlining water volume allocations for prospective tech developments.
 
 ## What’s Next 📣 { #whats-next .oasis-report-out-section }
 
-!!! note "Stewardship → Share"
-    Choose one next technical step and one next relationship, interpretation, or review step. Keep them specific enough that another person could act.
-
-    [Edit next steps](https://github.com/CU-ESIIL/hackathon_group_OASIS/edit/main/docs/index.md){ .md-button target="_blank" rel="noopener" }
-
 Next technical step:
 
-...
+- Expand the Python pipeline to automatically calculate dynamic watershed drawdown models based on customizable facility wattage sliders (2 MW to 500 MW).
 
 Next stewardship or collaboration step:
 
-...
+- Share the spatial zoning criteria with regional planning groups, municipal boards, and Tribal land stewards to ensure community self-determination drives infrastructure siting decisions.
 
 ## Who Should Be Involved Next { #who-should-be-involved-next }
 
 Potential roles or perspectives—not claims of consultation or approval:
 
-- ...
+- Tribal historic preservation and water resource departments.
+- Local public school administrators and community health researchers.
+- Rural electric cooperatives and municipal water utility engineers.
 
 What those people should help frame, interpret, question, or review:
 
-...
+- Thresholds for acceptable acoustic buffers near classrooms and cultural spaces.
+- Real-world water table tolerances during seasonal drought conditions.
 
 ## Code, Data, Citation and Reuse { #code-data-citation-and-reuse }
 
-!!! note "Final handoff"
-    Add stable source links, licenses or terms, citations, and concise reproduction notes. Run the [site completion coach](_site_health.md) for reminders; it is an editing aid, not scientific, ethical, sovereignty, or community approval.
-
 - **Source curriculum:** [OLC Climate Resiliency and Digital Sovereignty Learning Lab](https://github.com/olc-techsupport/Education-Climate-Resiliency-Digital-Sovereignty) [@olcClimateResiliency]
-- **Code/notebooks:** ...
-- **Data and terms:** ...
-- **Reuse notes:** ...
-
-If you use this template, cite the OASIS repository [@oasisProjectTemplate] and preserve attribution for every external dataset, method, and artifact.
-
-{{ references }}
+- **Primary Data:** MultiSector Dynamics IM3 Open Source Data Center Atlas (PNNL / DOE)
+- **State Data:** CleanView South Dakota Data Center Pipeline & USGS National Hydrography Dataset
