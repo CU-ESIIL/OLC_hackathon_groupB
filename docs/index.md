@@ -36,6 +36,7 @@ Title: Environmental and Social Impacts of Data centers
 [Open the Hackathon directions](instructions.md){ .md-button }
 
 People and Roles:
+
 Brittany: Data Collection: Identifying and streaming relevant datasets
 
 Cully: Team Name, Team Members, Title, and uploaded image to site
