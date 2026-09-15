@@ -2610,3 +2610,29 @@ Human review needed
 
 * At the pinned OLC source commit, original NOAA/USGS snapshot hashes verify and the preparation script reproduces the files used here, but the source curriculum’s committed `teaching_checksums.json` lists different prepared-output hashes. Facilitators should reconcile or regenerate that checksum file before presenting it as a participant verification target.
 * The completion coach is an editing aid only; it does not establish scientific validity, sovereignty compliance, community fit, ethics, consultation, permission, approval, or authority.
+
+2026-09-15
+
+Prompt
+
+User reported that the homepage hero image was broken.
+
+Files and folders inspected
+
+* `docs/index.md`
+* `docs/assets/hero/`
+* Recent Git history for the homepage hero reference
+* Generated `site/index.html`
+
+Actions taken
+
+* Restored the homepage hero image reference that was unintentionally removed during the latest full-page content revision.
+* Kept the previously selected `assets/hero/hero11.jpg` asset and added descriptive alt text.
+* Regenerated the site health report so it reflects the completed homepage content and restored custom hero.
+
+Verification
+
+* Confirmed `hero11.jpg` is a valid 3497 × 1960 JPEG.
+* Confirmed the restored path is relative to `docs/index.md` and matches the file on disk.
+* Ran `scripts/site_health.py`; generated zero structural warnings and zero incomplete Home items.
+* Ran `scripts/template_regression_check.py`; it still flags seven pre-existing template-scaffold expectations removed by the latest project-specific homepage rewrite.

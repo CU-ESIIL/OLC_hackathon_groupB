@@ -1,6 +1,8 @@
 # Carbon and Code: Environmental and Social Impacts of Data Centers
 *Evaluating hyperscale data center siting in South Dakota through spatial analysis of water vulnerability, community buffers, and distributed alternatives.*
 
+![Rows of illuminated server racks inside a data center](assets/hero/hero11.jpg)
+
 [See the completed OLC example](olc-example.md){ .md-button .md-button--primary }
 [See the completed fire example](example.md){ .md-button }
 [Open the Hackathon directions](instructions.md){ .md-button }
