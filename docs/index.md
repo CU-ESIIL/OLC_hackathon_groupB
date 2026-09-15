@@ -37,6 +37,7 @@ Title: Environmental and Social Impacts of Data centers
 
 People and Roles:
 Brittany: Data Collection: Identifying and streaming relevant datasets
+
 Cully: Team Name, Team Members, Title, and uploaded image to site
 
 !!! note "Day 1 — quick introductions"
