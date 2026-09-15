@@ -1,6 +1,8 @@
----
-title: OLC Climate Resiliency Hackathon Project
-public_mode_toggle: true
+Team Name: Carbon and Code
+
+Team Members: Cully Pourier, Leon Red Kettle, Emmanuel Akwasi Opoku, and Brittany Mark
+
+Title: Environmental and Social Impacts of Datacenters public_mode_toggle: true
 ---
 
 !!! tip "Start here — September 15–16, 2026"
