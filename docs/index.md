@@ -35,7 +35,8 @@ Title: Environmental and Social Impacts of Data centers
 [See the completed fire example](example.md){ .md-button }
 [Open the Hackathon directions](instructions.md){ .md-button }
 
-## People { #people }
+Brittany: Data Collection: Identifying and streaming relevant datasets
+Cully: Team Name, Team Members, Title, and uploaded image to site
 
 !!! note "Day 1 — quick introductions"
     Add one short row per teammate. Share what you know, what you hope to learn, and which role you can take first. Roles can change as the work changes.
