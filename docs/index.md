@@ -132,7 +132,7 @@ South Dakota is at a critical policy crossroads. Adopting a centralized hypersca
 ![Rows of illuminated server racks inside a data center](docs/assets/hero/Datacenters2.png)
 ![Likely Voltage Charge](docs/assets/hero/Datacenters6.png)
 
-What these data or artifacts cannot tell us:
+What these data or artifacts cannot tell us.
 
 - The exact power purchase agreements (PPAs) or backup fuel types (diesel vs. battery storage) contracted by incoming operators.
 - The degree of closed-loop water recycling technology that developers might voluntarily adopt prior to groundbreaking.
