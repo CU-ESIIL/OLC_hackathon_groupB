@@ -130,7 +130,7 @@ South Dakota is at a critical policy crossroads. Adopting a centralized hypersca
 ## What Remains Uncertain 📣 { #what-remains-uncertain .oasis-report-out-section }
 
 ![Rows of illuminated server racks inside a data center](docs/assets/hero/Datacenters2.png)
-
+![Likely Voltage Charge](docs/assets/hero/Datacenters6.png)
 
 What these data or artifacts cannot tell us:
 
