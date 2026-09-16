@@ -287,7 +287,7 @@ A future version should distinguish:
 
 ## What Remains Uncertain { #what-remains-uncertain .oasis-report-out-section }
 
-![Additional team data center reference visual](assets/hero/Datacenters2.png)
+
 
 ### Major Unknowns
 
