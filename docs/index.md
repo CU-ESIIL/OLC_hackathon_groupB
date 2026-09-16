@@ -262,6 +262,15 @@ Specific notebook and output filenames should be linked when confirmed.
 | What We Do Not Know | Site-specific cooling, actual operating loads, water availability, and exposure conditions. |
 | What We Should Not Claim | That buffers prove harm, Green means approved, or distributed development necessarily reduces total environmental impacts. |
 
+## Project Limitations and Data Challenges { #project-limitations .oasis-report-out-section }
+
+**Contributor:** Leon Red Kettle
+
+- **Time constraints:** The limited analysis timeframe narrowed our scope to the most accessible datasets relevant to the project.
+- **Data availability:** Historical 30-day changes were not consistently available across facilities, limiting comparisons over time.
+- **Incomplete data and attributes:** Some initial CSV files were empty or lacked required columns, including stage-based power changes. We pivoted to alternative sources, including the Compute Atlas JSON.
+- **Interpretation limits:** Missing values should not be treated as zero or as evidence of no change. Comparisons across sources require consistent definitions, reporting dates, and facility coverage.
+
 ## What Did Not Work { #what-didnt-work }
 
 The team could not incorporate dynamic local water drawdown information within the hackathon timeframe.
@@ -319,7 +328,6 @@ Participation should shape the analysis—not simply endorse a completed model.
 
 ### Questions for Developers
 
-- What does the stated MW rating represent?
 - What are expected average and peak loads?
 - Which cooling system and water sources are proposed?
 - What are expected withdrawals and consumption during normal and drought conditions?
