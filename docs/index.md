@@ -1,172 +1,373 @@
+---
+title: "Carbon and Code: Environmental and Social Impacts of Data Centers"
+description: Evaluating data center siting in South Dakota through spatial screening, water-risk context, community buffers, and distributed alternatives.
+---
+
 # Carbon and Code: Environmental and Social Impacts of Data Centers
-*Evaluating hyperscale data center siting in South Dakota through spatial analysis of water vulnerability, community buffers, and distributed alternatives.*
+
+*Evaluating data center siting in South Dakota through spatial analysis of water risk, community infrastructure, and centralized versus distributed alternatives.*
 
 ![Rows of illuminated server racks inside a data center](assets/hero/hero11.jpg)
 
-[See the completed OLC example](olc-example.md){ .md-button .md-button--primary }
-[See the completed fire example](example.md){ .md-button }
-[Open the Hackathon directions](instructions.md){ .md-button }
+> **Project scope:** This hackathon prototype supports preliminary siting discussions. It is not a regulatory zoning determination, engineering assessment, or proof of environmental harm. Completed work described below reflects the team's project account; site-specific claims require traceable supporting records.
 
-### People and Roles
+## People and Roles { #people }
 
-| Name | Affiliation | Contact | Starting role |
-|---|---|---|---|
-| Cully Pourier | Hackathon Participant | Team Carbon & Code | Project framing, visual documentation, repository curation |
-| Leon Red Kettle | Hackathon Participant | Team Carbon & Code | Spatial analysis, zoning criteria, architectural modeling |
-| Emmanuel Akwasi Opoku | Hackathon Participant | Team Carbon & Code | Technical pipeline, data synthesis, narrative integration |
-| Brittany Mark | Hackathon Participant | Team Carbon & Code | Data engineering, pipeline streaming, source verification |
+| Name | Affiliation | Starting Role |
+|---|---|---|
+| Cully Pourier | Hackathon Participant | Project framing, visual documentation, repository curation |
+| Leon Red Kettle | Hackathon Participant | Spatial analysis, zoning criteria, architectural modeling |
+| Emmanuel Akwasi Opoku | Hackathon Participant | Technical pipeline, data synthesis, narrative integration |
+| Brittany Mark | Hackathon Participant | Data engineering, pipeline streaming, source verification |
 
 ## Team Norms and Decision Making { #team-norms-and-decision-making }
 
 Our team norms:
 
-- Prioritize community impact and environmental protection over pure technical complexity.
-- Maintain transparent documentation of all assumptions and data limits.
-- Ensure every team member contributes to both technical artifacts and storytelling.
+- Prioritize community impact and environmental protection over technical complexity.
+- Document assumptions, data limitations, and alternative interpretations.
+- Ensure every team member contributes to technical artifacts and communication.
+- Respect Tribal sovereignty and restrictions on sharing sensitive information.
 
-Our decision rule:
+**Decision rule:** Seek consensus first. If time is limited, the member leading the relevant technical module decides how to proceed while documenting trade-offs and unresolved concerns.
 
-- Consensus first; if time-constrained, the member leading the specific technical module decides how to proceed while documenting trade-offs.
+## Our Question { #project-question .oasis-report-out-section }
 
-## Our Question 📣 { #project-question .oasis-report-out-section }
+> How can South Dakota use spatial environmental and infrastructure data to screen proposed data center locations for water-related and community concerns, and compare centralized and distributed development without assuming either is inherently preferable?
 
-Our working question:
+### Hackathon Success Criteria
 
-> How can emerging data center markets like South Dakota use spatial Earth observation and infrastructure data to proactively zone hyperscale data centers away from vulnerable watersheds and educational facilities, favoring distributed edge architectures over resource-intensive centralized facilities?
+- Extract and spatially filter relevant data center records for South Dakota.
+- Develop a prototype Red–Yellow–Green screening framework.
+- Visualize facility locations alongside water-risk indicators, public infrastructure, and precautionary buffers.
+- Compare centralized and distributed scenarios using equal aggregate capacity.
+- Clearly communicate uncertainty and the need for local review.
 
-What would count as progress by noon on September 16:
+## Why This Matters { #why-this-matters .oasis-report-out-section }
 
-- Extraction and spatial filtering of the IM3 Data Center Atlas for South Dakota.
-- A functional multi-layer GIS workflow defining a "Traffic Light" zoning schema (Red, Yellow, Green zones).
-- An interactive map or prototype visualizing buffer zones around municipal water service areas and public infrastructure.
+Data center siting raises questions about electricity demand, cooling water, infrastructure costs, noise, land use, and how benefits and burdens are distributed.
 
-## Why This Matters 📣 { #why-this-matters .oasis-report-out-section }
+Our project focuses on identifying these questions early enough to inform planning.
 
-This matters because:
+- **Electricity:** Proposed capacity should be evaluated alongside expected operating loads and utility infrastructure.
+- **Water:** Cooling design, water source, seasonal availability, and existing demands are necessary inputs to a site-specific assessment.
+- **Community infrastructure:** Nearby schools and other sensitive locations warrant investigation, but distance alone does not establish exposure or harm.
+- **Local decision-making:** Spatial screening should support—not replace—community knowledge, appropriate governance, and technical review.
 
-- Mature markets like Hillsboro, Oregon demonstrate that uncoordinated data center expansion leads to acute resource strain and severe community pushback after infrastructure is already locked in.
-- South Dakota is an emerging frontier: currently hosting just 3 MW of operational capacity, but facing a planned influx of over 500 MW (including the proposed 500 MW Gemini facility).
-- In semi-arid regions, evaporative cooling systems consume between 100,000 and 1,000,000+ gallons of potable water daily per facility.
-- Proximity to hyperscale facilities imposes chronic noise pollution (85–96 dB) and backup generator emissions (PM2.5/NOx), which peer-reviewed educational reporting links to adverse impacts on learning and school performance.
+The original draft included numerical claims about statewide capacity, daily water use, and noise levels. These are not treated as established findings here because their underlying records, measurement conditions, and citations were not supplied.
 
-People who might use, question, or improve this work:
+### Potential Audiences
 
-- Tribal land-use planners and regional municipal zoning boards establishing data sovereignty frameworks.
-- Environmental justice advocates evaluating watershed depletion and grid reliability.
-- Infrastructure planners modeling distributed edge alternatives against centralized hyperscale footprints.
+- Tribal land-use planners and designated representatives
+- Municipal and county planning boards
+- Residents and environmental justice organizations
+- Water utilities and electric cooperatives
+- Infrastructure planners and researchers
 
-## What We Tried to Build 📣 { #what-we-tried-to-build .oasis-report-out-section }
-[US Datacenters vs. Aqueduct Baseline Water Stress](docs/assets/hero/Datacenter-3.png)
-By the end of the Hackathon, we tried to make:
+These are potential audiences, not claims of consultation or endorsement.
 
-- A reproducible spatial zoning pipeline that takes proposed data center coordinates and evaluates compliance against environmental and human-health exclusion boundaries.
-- An interactive map artifact showing current vs. projected facilities against municipal water basins, electric transmission lines, and high-speed fiber corridors.
+## What We Tried to Build { #what-we-tried-to-build .oasis-report-out-section }
 
-Our chosen pathway and why it fit:
+Our intended product is a reproducible spatial screening pipeline that compares proposed data center coordinates with environmental and community-infrastructure layers.
 
-- **Data Investigator & Technical Extender:** We are combining open-source infrastructure projections with federal environmental layers to evaluate whether planned centralized sites encroach on vulnerable community resources.
+The team's reported work includes:
+
+- Filtering data center records for South Dakota
+- Creating precautionary buffers around selected features
+- Exploring overlap between facility locations and screening areas
+- Preparing a prototype map and reusable geographic outputs
+
+**Chosen pathway:** Data Investigator and Technical Extender.
+
+The purpose is to identify locations requiring further investigation—not to determine legal compliance or automatically approve or exclude development.
+
+### Water-Stress Comparison Visual
+
+![Team map comparing U.S. data center locations with Aqueduct baseline water stress](assets/hero/Datacenter-3.png)
+
+*Team-provided visual. Interpret using the map legend and source metadata. Spatial overlap with water stress does not establish facility water consumption or causation.*
 
 ## Data and Evidence { #data-and-evidence }
 
-| Dataset | Source | Place | Period | What it measures |
-|---|---|---|---|---|
-| IM3 Open Source Data Center Atlas | MultiSector Dynamics / PNNL | Continental US / South Dakota | Feb 2026 Release (Projections to 2035) | Operational (MW) and projected hyperscale facilities, site footprint, siting costs |
-| Municipal Water Service Areas | IM3 / USGS / State GIS | Continental US / Regional SD | 2024–2026 | Delineated service polygons for public water supply and municipal utility coverage |
-| Electric Transmission Lines | EIA / HIFLD / DHS | South Dakota regional grid | 2024–2026 | Voltage capacity, line pathways, and grid interconnect corridors |
-| High-Speed Fiber Provider Density | FCC / IM3 Atlas | Regional US / South Dakota | 2025–2026 | Broadband routing density and fiber optic trunk lines |
-| Public Schools & Community Infrastructure | HIFLD / NCES | South Dakota | 2024–2026 | Geographic coordinates of K-12 educational facilities for noise buffer mapping |
+| Dataset or Layer | Source Identified by the Team | Intended Use | Verification Needed |
+|---|---|---|---|
+| Data center locations and available footprints | IM3 / PNNL | Locate facilities and examine spatial patterns | Exact release, field definitions, coverage, and facility status |
+| Future facility projections | IM3 projection products | Explore modeled development scenarios | Distinguish modeled locations from announced or permitted projects |
+| Baseline water stress | WRI Aqueduct | Provide regional water-risk context | Version, indicator, reference period, and spatial resolution |
+| Municipal water service areas | IM3-linked or relevant utility/state sources | Identify service-area context | Exact producer, date, and boundaries |
+| Electric transmission lines | EIA / HIFLD sources identified in the draft | Examine infrastructure corridors | Exact dataset and attributes; voltage does not establish spare capacity |
+| Broadband or fiber-related coverage | FCC / IM3 sources identified in the draft | Explore connectivity context | Distinguish service availability from physical fiber routes |
+| Public schools | NCES / HIFLD sources identified in the draft | Locate schools for precautionary screening | Dataset vintage and positional accuracy |
+| Named development records | CleanView and primary project records | Check proposed capacity and project status | Direct record links, dates, and confirmation from primary documentation |
+
+### Evidence Boundaries
+
+- Water service areas are not watersheds and do not measure depletion.
+- Broadband availability is not necessarily a map of fiber trunk lines.
+- Modeled future facilities are not confirmed development proposals.
+- Building footprints do not directly measure IT floor area or electricity demand.
+- Proximity does not establish noise exposure, air-quality effects, or health outcomes.
+
+Record source URLs, versions, access dates, licenses, units, and processing steps before presenting quantitative findings.
+
+## Estimated Power Demand by Facility Size { #power-demand .oasis-report-out-section }
+
+The following table preserves the values supplied by the team as a preliminary size-to-power reference.
+
+**These ranges and voltage mappings are unverified illustrative values, not universal engineering standards.**
+
+| Building Area (sq. ft.) | Illustrative Power Range (MW) | Supplied Voltage (kV; Unverified) |
+|---:|---:|---:|
+| 50,000 | 5–10 | 35 |
+| 100,000 | 10–20 | 69 |
+| 250,000 | 25–75 | 69–138 |
+| 500,000 | 50–150 | 138 |
+| 1,000,000 | 100–300 | 138–230 |
+
+*Source: Team-supplied reference screenshot. Original technical source and publication date remain to be confirmed.*
+
+### Important Notes
+
+- **MW** measures electrical power.
+- **MWh and GWh** measure energy consumed over time.
+- **kV** measures voltage, not power consumption.
+- The source does not specify whether MW represents IT load, total facility load, or contracted capacity.
+- The source does not define whether area represents footprint, total floor area, or IT equipment space.
+- The first two rows imply 100–200 W per square foot; the remaining rows imply 100–300 W per square foot.
+- Voltage requirements must be confirmed with the utility, not inferred from building size alone.
+- These rows should not be extrapolated to the 2 MW and 500 MW scenarios without a justified method.
+
+### Calculation Framework
+
+```text
+Estimated power (MW)
+= applicable area (sq. ft.) × power density (W/sq. ft.) ÷ 1,000,000
+
+Average facility power (MW)
+= facility capacity (MW) × assumed average load fraction
+
+Annual energy (MWh)
+= average facility power (MW) × hours in the year
+```
+
+For example, a facility averaging 10 MW over a 365-day year would consume:
+
+```text
+10 × 8,760 = 87,600 MWh = 87.6 GWh
+```
+
+This is illustrative arithmetic, not measured consumption.
+
+## Centralized Versus Distributed Scenarios { #development-scenarios .oasis-report-out-section }
+
+A fair electrical-capacity comparison requires **one 500 MW facility versus 250 facilities of 2 MW each**.
+
+For this example, MW represents total facility electrical capacity.
+
+| Comparison Item | Centralized | Distributed |
+|---|---:|---:|
+| Number of facilities | 1 | 250 |
+| Capacity per facility | 500 MW | 2 MW |
+| Aggregate capacity | 500 MW | 500 MW |
+| Assumed average load fraction | 80% | 80% |
+| Aggregate average power | 400 MW | 400 MW |
+| Annual energy at 8,760 hours | 3,504,000 MWh | 3,504,000 MWh |
+| Annual energy in GWh | 3,504 GWh | 3,504 GWh |
+
+*The 80% load fraction is an assumption, not an observed operating value.*
+
+### Interpretation
+
+With equal aggregate capacity and equal average load fractions, both scenarios have the same modeled electricity consumption.
+
+Distribution changes where demand occurs. It does not automatically reduce total water use, energy consumption, or environmental impact.
+
+Equal electrical capacity also does not guarantee equal computing output. Comparisons should consider equipment, workloads, cooling, and operating conditions.
+
+**Named-project caution:** The draft identified Gemini and Sequitor Edge as examples. Their capacities, locations, and status require direct supporting records. The calculations above do not verify those projects.
 
 ## Methods and Tools { #methods-and-tools }
 
-Methods, tools, or approaches we tried:
+The following summarizes the team's reported approach and the limits that should accompany its results.
 
-| Approach | What we did | What happened |
+| Approach | Team-Reported Work | Interpretation Boundary |
 |---|---|---|
-| Spatial Data Extraction | Downloaded existing and projected geospatial layers from the IM3 Open Source Atlas | Isolated regional points for South Dakota, identifying the 500 MW Gemini site in Minnehaha County |
-| Buffer Zone Calculation | Defined a 2-mile precautionary buffer around schools and critical water service areas | Flagged potential overlap areas between projected hyperscale sites and sensitive community infrastructure |
-| Centralized vs. Distributed Comparison | Modeled resource intensity differences between 500 MW centralized sites and 2 MW distributed edge sites | Clarified the trade-off: distributed edge sites dramatically reduce localized water cooling stress |
+| Spatial extraction | Filtered data center layers to South Dakota | Verify release, facility status, and duplicate records |
+| Buffer calculation | Applied a 2-mile precautionary buffer around selected schools and water service areas | A team-selected screening assumption, not a verified legal or health threshold |
+| Spatial overlay | Examined overlap with selected infrastructure and environmental layers | Overlap flags questions; it does not establish harm or noncompliance |
+| Scenario comparison | Compared large centralized and smaller distributed configurations | Match aggregate capacity and document load and cooling assumptions |
 
-### Working visual or output
+### Prototype Traffic-Light Framework
 
-![Working figure, map, screenshot, or prototype](assets/figures/figure1.png)
+| Category | Screening Meaning | Appropriate Next Step |
+|---|---|---|
+| Red | Overlap with a team-defined high-concern screening feature | Flag for detailed review; do not describe as a legal exclusion unless verified |
+| Yellow | Precautionary proximity or unresolved constraints | Collect additional site-specific evidence |
+| Green | No selected screening flag detected in available data | Continue review; not proof of suitability, safety, or approval |
+| Unclassified | Required data are missing or insufficient | Obtain evidence before assigning a category |
 
-*Figure 1: IM3 Open Source Data Center Atlas showing national infrastructure corridors, existing data centers, and 2035 projected hyperscale hubs layered against municipal water basins.*
+**Missing information must not default to Green.**
 
-### Failed attempts and useful obstacles
+### Technical Checks
 
-- National datasets required extensive spatial cropping to avoid computational lag when running polygon intersections locally.
-- Determining precise daily water consumption for specific proprietary cooling towers is rarely disclosed publicly; we used standardized conservative ranges (100k to 1M gal/day) based on published literature.
+- Use a suitable projected coordinate system for distance buffers.
+- Convert the 2-mile assumption consistently: **3,218.688 meters**.
+- Validate geometries before intersections or spatial joins.
+- Preserve source identifiers and missing-data flags.
+- Keep administrative, watershed, service-area, and jurisdictional boundaries distinct.
+- Test how results change with different buffer distances.
+
+### Working Visual
+
+![Team infrastructure screening map](assets/figures/figure1.png)
+
+*Team-provided working figure. Confirm its layer names, dates, legend, and projection scenario before using it to support a specific claim.*
+
+### Obstacles Encountered
+
+- National layers required regional cropping to reduce processing time.
+- Site-specific cooling and water-use information was difficult to obtain.
+- Real-time local water drawdown information was not available within the hackathon workflow.
+
+Generic water-use ranges should not replace site-specific evidence without a clearly stated model and suitable source.
 
 ## What We Made { #what-we-made }
 
-- **Main artifact:** A prototype "Smart Zoning Engine" mapping pipeline separating regional land into Red (Exclusion), Yellow (Buffer), and Green (Viable Distributed Corridor) zones.
-- **Code or notebook:** Jupyter Notebooks executing GeoPandas spatial joins between projected facility points, school locations, and water boundaries.
-- **Reusable data or output:** A clean GeoJSON subset of South Dakota data infrastructure, ready for integration into open-source web mapping libraries.
+The team reports producing:
 
-## What We Learned 📣 { #what-we-learned .oasis-report-out-section }
+- **Main artifact:** A prototype “Smart Zoning Engine” for exploratory spatial screening.
+- **Code:** Jupyter notebooks using GeoPandas spatial joins and buffers.
+- **Reusable output:** A South Dakota GeoJSON subset.
+- **Communication artifact:** A comparison of power-demand assumptions and development scenarios.
 
-**Observation — what happened:** 
-Statewide data shows South Dakota currently operates only 3 MW across two Tierpoint facilities in Sioux Falls. However, pipeline data indicates a single planned project—the Gemini Data Center in Minnehaha County—represents 500 MW of demand, fundamentally shifting the state’s infrastructure footprint overnight.
+[Open the team code folder](https://github.com/CU-ESIIL/hackathon_group_OASIS/tree/main/code)
 
-**Evidence — what supports it:** 
-CleanView project registries and the IM3 Data Center Atlas corroborate this 500 MW projection alongside rural edge developments like the 2 MW Sequitor Edge project in Rapid City.
+Specific notebook and output filenames should be linked when confirmed.
 
-**Interpretation — what we think it means:** 
-South Dakota is at a critical policy crossroads. Adopting a centralized hyperscale model concentrates extreme water and power demands into localized municipal systems. Shifting focus toward distributed, smaller-scale edge nodes allows data infrastructure to expand along existing transmission corridors without exceeding watershed capacities.
+## What We Learned { #what-we-learned .oasis-report-out-section }
 
-### Claim ladder
+**Observation:** The team encountered records describing existing facilities and potential future developments with different capacity scales.
 
-| Level | Team statement |
+**Evidence boundary:** Statewide totals and named-project capacities require dated, directly traceable records. Proposed capacity is not current electricity consumption, and modeled locations are not confirmed projects.
+
+**Interpretation:** Early spatial screening can organize questions about infrastructure and community context. It cannot independently determine whether a development is acceptable or whether distributed facilities are preferable.
+
+### Claim Ladder
+
+| Level | Team Statement |
 |---|---|
-| **What We Observed** | Planned data center capacity in South Dakota is projected to expand by over 16,000% (from 3 MW to 505 MW), driven by a single hyperscale development. |
-| **What We Think** | Siting centralized facilities without proactive buffer zoning threatens semi-arid water supplies and risks educational and noise disruptions for adjacent communities. |
-| **What We Don’t Know** | The exact proprietary cooling design (evaporative vs. closed-loop air cooled) planned for upcoming regional sites. |
-| **What We Should Not Claim** | That all data center development is inherently destructive, or that economic benefits cannot coexist with strict environmental zoning. |
+| What We Observed | Spatial layers can be combined to identify overlap with selected screening features. |
+| What We Calculated | An equal-capacity comparison of 500 MW and 2 MW facilities requires 250 smaller facilities. |
+| What We Think | Early screening may help identify questions for local planning and technical review. |
+| What We Do Not Know | Site-specific cooling, actual operating loads, water availability, and exposure conditions. |
+| What We Should Not Claim | That buffers prove harm, Green means approved, or distributed development necessarily reduces total environmental impacts. |
 
-## What Didn’t Work { #what-didnt-work }
+## What Did Not Work { #what-didnt-work }
 
-- Attempting to dynamically query real-time water drawdown rates from local aquifers proved impossible within hackathon time constraints due to fragmented state and municipal reporting. We pivoted to using verified municipal service boundaries as proxy vulnerability zones.
+The team could not incorporate dynamic local water drawdown information within the hackathon timeframe.
 
-## What Remains Uncertain 📣 { #what-remains-uncertain .oasis-report-out-section }
+Municipal service boundaries were used as a contextual layer, but they are **not a substitute for hydrological measurements or a validated vulnerability model**.
 
-![Rows of illuminated server racks inside a data center](docs/assets/hero/Datacenters2.png)
-![Likely Voltage Charge](docs/assets/hero/Datacenters6.png)
+A future version should distinguish:
 
-What these data or artifacts cannot tell us.
+- Service coverage
+- Source-water catchments
+- Groundwater conditions
+- Seasonal water availability
+- Existing demand and permitted withdrawals
 
-- The exact power purchase agreements (PPAs) or backup fuel types (diesel vs. battery storage) contracted by incoming operators.
-- The degree of closed-loop water recycling technology that developers might voluntarily adopt prior to groundbreaking.
+## What Remains Uncertain { #what-remains-uncertain .oasis-report-out-section }
 
-What would strengthen or challenge our interpretation:
+![Additional team data center reference visual](assets/hero/Datacenters2.png)
 
-- On-the-ground acoustic baseline readings near existing urban facilities.
-- Transparent municipal utility contracts outlining water volume allocations for prospective tech developments.
+### Major Unknowns
 
-## What’s Next 📣 { #whats-next .oasis-report-out-section }
+- Actual and expected average electrical loads
+- Cooling technologies and operating conditions
+- Water sources, withdrawals, and consumption
+- Utility agreements and infrastructure upgrade requirements
+- Backup generation, fuels, and emissions controls
+- Site-specific noise levels at nearby receptors
+- Completeness and currency of the spatial datasets
 
-Next technical step:
+### What Would Strengthen the Work?
 
-- Expand the Python pipeline to automatically calculate dynamic watershed drawdown models based on customizable facility wattage sliders (2 MW to 500 MW).
+- Primary project and utility documentation
+- Measured acoustic baselines and site-specific modeling
+- Water allocation and seasonal availability information
+- Reproducible notebooks with exact data versions
+- Sensitivity tests for buffer distances and load assumptions
+- Appropriate community and technical review
 
-Next stewardship or collaboration step:
+## What Is Next { #whats-next .oasis-report-out-section }
 
-- Share the spatial zoning criteria with regional planning groups, municipal boards, and Tribal land stewards to ensure community self-determination drives infrastructure siting decisions.
+### Technical Next Steps
+
+1. Validate source versions and named-project records.
+2. Publish reproducible notebooks and link exact outputs.
+3. Add configurable load assumptions and buffer distances.
+4. Separate electricity, water, and community-screening results.
+5. Add water modeling only when cooling, source-water, and hydrological inputs are sufficient.
+
+A facility-wattage slider alone cannot calculate watershed drawdown.
+
+### Stewardship Next Steps
+
+Seek guidance from relevant community representatives, regional planners, municipal boards, and Tribal authorities on the question, criteria, and public outputs.
+
+Participation should shape the analysis—not simply endorse a completed model.
+
+### Questions for Developers
+
+- What does the stated MW rating represent?
+- What are expected average and peak loads?
+- Which cooling system and water sources are proposed?
+- What are expected withdrawals and consumption during normal and drought conditions?
+- What infrastructure upgrades are needed, and who pays?
+- What noise and emissions evidence will be made available?
+- How will performance commitments be monitored?
+- How will affected communities participate?
 
 ## Who Should Be Involved Next { #who-should-be-involved-next }
 
-Potential roles or perspectives—not claims of consultation or approval:
+Potential roles and perspectives—not claims of consultation or approval:
 
-- Tribal historic preservation and water resource departments.
-- Local public school administrators and community health researchers.
-- Rural electric cooperatives and municipal water utility engineers.
+- Tribal historic preservation and water resource departments
+- Community members and designated representatives
+- School administrators and environmental health researchers
+- Rural electric cooperatives
+- Municipal water utility engineers
+- Local planners and independent technical reviewers
 
-What those people should help frame, interpret, question, or review:
+Their guidance should help establish appropriate screening criteria, evidence needs, information-sharing boundaries, and interpretation.
 
-- Thresholds for acceptable acoustic buffers near classrooms and cultural spaces.
-- Real-world water table tolerances during seasonal drought conditions.
+## Code, Data, Citation, and Reuse { #code-data-citation-and-reuse }
 
-## Code, Data, Citation and Reuse { #code-data-citation-and-reuse }
+### Sources
 
-- **Source curriculum:** [OLC Climate Resiliency and Digital Sovereignty Learning Lab](https://github.com/olc-techsupport/Education-Climate-Resiliency-Digital-Sovereignty) [@olcClimateResiliency]
-- **Primary Data:** MultiSector Dynamics IM3 Open Source Data Center Atlas (PNNL / DOE)
-- **State Data:** CleanView South Dakota Data Center Pipeline & USGS National Hydrography Dataset
+- [IM3 Open Source Data Center Atlas](https://immm-sfa.github.io/datacenter-atlas/)
+- [WRI Aqueduct](https://www.wri.org/aqueduct)
+- [Team repository](https://github.com/CU-ESIIL/hackathon_group_OASIS)
+- [OLC Climate Resiliency and Digital Sovereignty Learning Lab](https://github.com/olc-techsupport/Education-Climate-Resiliency-Digital-Sovereignty)
+
+The draft also identified CleanView, USGS, EIA, HIFLD, FCC, and NCES. Add direct links to the exact records and dataset releases used before treating related numerical claims as verified.
+
+**Power-table attribution:** Team-supplied screenshot; original technical source unresolved.
+
+Preserve the upstream OASIS template attribution and applicable licenses.
+
+### Reproduction and Public-Sharing Checklist
+
+- [ ] Record exact dataset versions and access dates.
+- [ ] Document units, coordinate systems, and preprocessing.
+- [ ] Link the notebooks and generated outputs.
+- [ ] Distinguish measured, reported, assumed, and projected values.
+- [ ] Document missing data and sensitivity tests.
+- [ ] Verify image filenames and capitalization.
+- [ ] Preserve licenses and attribution.
+- [ ] Remove sensitive or unauthorized information.
+- [ ] Do not imply community approval or regulatory compliance.
+
+---
+
+*Carbon and Code is a hackathon research prototype. Its outputs support preliminary discussion and further investigation, not automatic siting decisions.*
