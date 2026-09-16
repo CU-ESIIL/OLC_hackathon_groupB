@@ -128,6 +128,7 @@ South Dakota is at a critical policy crossroads. Adopting a centralized hypersca
 - Attempting to dynamically query real-time water drawdown rates from local aquifers proved impossible within hackathon time constraints due to fragmented state and municipal reporting. We pivoted to using verified municipal service boundaries as proxy vulnerability zones.
 
 ## What Remains Uncertain 📣 { #what-remains-uncertain .oasis-report-out-section }
+[hhhh](docs/assets/hero/Datacenters- 2.png)
 
 What these data or artifacts cannot tell us:
 
