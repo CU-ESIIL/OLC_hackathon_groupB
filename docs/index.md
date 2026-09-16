@@ -276,6 +276,15 @@ A future version should distinguish:
 - Seasonal water availability
 - Existing demand and permitted withdrawals
 
+## Project Limitations and Data Challenges { #project-limitations .oasis-report-out-section }
+
+**Contributor:** Leon Red Kettle
+
+- **Time constraints:** The limited analysis timeframe narrowed our scope to the most accessible datasets relevant to the project.
+- **Data availability:** Historical 30-day changes were not consistently available across facilities, limiting comparisons over time.
+- **Incomplete data and attributes:** Some initial CSV files were empty or lacked required columns, including stage-based power changes. We pivoted to alternative sources, including the Compute Atlas JSON.
+- **Interpretation limits:** Missing values should not be treated as zero or as evidence of no change. Comparisons across sources require consistent definitions, reporting dates, and facility coverage.
+
 ## What Remains Uncertain { #what-remains-uncertain .oasis-report-out-section }
 
 ![Additional team data center reference visual](assets/hero/Datacenters2.png)
