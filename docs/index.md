@@ -56,7 +56,7 @@ People who might use, question, or improve this work:
 - Infrastructure planners modeling distributed edge alternatives against centralized hyperscale footprints.
 
 ## What We Tried to Build 📣 { #what-we-tried-to-build .oasis-report-out-section }
-
+[US Datacenters vs. Aqueduct Baseline Water Stress]docs/assets/hero/Datacenter-3.png
 By the end of the Hackathon, we tried to make:
 
 - A reproducible spatial zoning pipeline that takes proposed data center coordinates and evaluates compliance against environmental and human-health exclusion boundaries.
